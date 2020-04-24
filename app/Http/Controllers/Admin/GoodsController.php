@@ -18,6 +18,7 @@ class GoodsController extends Controller
      */
     public function index()
     {
+        echo 123;
         //dd(session('adminuser'));
 
         // //设置session
