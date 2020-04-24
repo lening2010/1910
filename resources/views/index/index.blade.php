@@ -39,62 +39,15 @@
       <div class="clearfix"></div>
      </ul><!--pronav/-->
      <div class="index-pro1">
+      @foreach($best as $v)
       <div class="index-pro1-list">
        <dl>
-        <dt><a href="proinfo.html"><img src="/static/index/images/pro1.jpg" /></a></dt>
-        <dd class="ip-text"><a href="proinfo.html">这是产品的名称</a><span>已售：488</span></dd>
-        <dd class="ip-price"><strong>¥299</strong> <span>¥599</span></dd>
+        <dt><a href="{{url('goods/'.$v->goods_id)}}"><img src="{{env('UPLOADS_URL')}}{{$v->goods_img}}" width="293" height="298" /></a></dt>
+        <dd class="ip-text"><a href="{{url('goods/'.$v->goods_id)}}">{{$v->goods_name}}</a><span>已售：488</span></dd>
+        <dd class="ip-price"><strong>¥{{$v->goods_price}}</strong> <span>¥599</span></dd>
        </dl>
       </div>
-      <div class="index-pro1-list">
-       <dl>
-        <dt><a href="proinfo.html"><img src="/static/index/images/pro1.jpg" /></a></dt>
-        <dd class="ip-text"><a href="proinfo.html">这是产品的名称</a></dd>
-        <dd class="ip-price"><strong>¥299</strong> <span>¥599</span></dd>
-       </dl>
-      </div>
-      <div class="index-pro1-list">
-       <dl>
-        <dt><a href="proinfo.html"><img src="/static/index/images/pro1.jpg" /></a></dt>
-        <dd class="ip-text"><a href="proinfo.html">这是产品的名称</a><span>已售：488</span></dd>
-        <dd class="ip-price"><strong>¥299</strong> <span>¥599</span></dd>
-       </dl>
-      </div>
-      <div class="index-pro1-list">
-       <dl>
-        <dt><a href="proinfo.html"><img src="/static/index/images/pro1.jpg" /></a></dt>
-        <dd class="ip-text"><a href="proinfo.html">这是产品的名称</a></dd>
-        <dd class="ip-price"><strong>¥299</strong> <span>¥599</span></dd>
-       </dl>
-      </div>
-      <div class="index-pro1-list">
-       <dl>
-        <dt><a href="proinfo.html"><img src="/static/index/images/pro1.jpg" /></a></dt>
-        <dd class="ip-text"><a href="proinfo.html">这是产品的名称</a><span>已售：488</span></dd>
-        <dd class="ip-price"><strong>¥299</strong> <span>¥599</span></dd>
-       </dl>
-      </div>
-      <div class="index-pro1-list">
-       <dl>
-        <dt><a href="proinfo.html"><img src="/static/index/images/pro1.jpg" /></a></dt>
-        <dd class="ip-text"><a href="proinfo.html">这是产品的名称</a></dd>
-        <dd class="ip-price"><strong>¥299</strong> <span>¥599</span></dd>
-       </dl>
-      </div>
-      <div class="index-pro1-list">
-       <dl>
-        <dt><a href="proinfo.html"><img src="/static/index/images/pro1.jpg" /></a></dt>
-        <dd class="ip-text"><a href="proinfo.html">这是产品的名称</a><span>已售：488</span></dd>
-        <dd class="ip-price"><strong>¥299</strong> <span>¥599</span></dd>
-       </dl>
-      </div>
-      <div class="index-pro1-list">
-       <dl>
-        <dt><a href="proinfo.html"><img src="/static/index/images/pro1.jpg" /></a></dt>
-        <dd class="ip-text"><a href="proinfo.html">这是产品的名称</a></dd>
-        <dd class="ip-price"><strong>¥299</strong> <span>¥599</span></dd>
-       </dl>
-      </div>
+      @endforeach
       <div class="clearfix"></div>
      </div><!--index-pro1/-->
      <div class="prolist">
